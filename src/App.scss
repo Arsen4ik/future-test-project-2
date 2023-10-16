@@ -1,0 +1,66 @@
+.searching {
+  // background-color: aliceblue;
+  background-image: url('../public/library.jpg');
+  background-position: center;
+  background-size: contain;
+  height: 33vh;
+  max-height: 300px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 3fr 2fr repeat(2, 1fr);
+  padding: 20px 25%;
+  gap: 20px;
+
+
+  input, select {
+    // width: 50%;
+    padding: 5px;
+    width: 100%;
+    border: 0;
+  }
+  input:focus, select:focus {
+    outline: solid 2px crimson;
+  }
+  h1 {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    font-size: xx-large;
+  }
+  h1, h2 {
+    // text-align: center;
+    color: whitesmoke;
+    backdrop-filter: blur(5px);
+    width: fit-content;
+    height: fit-content;
+    padding: 3px 10px;
+    margin: 0 auto;
+    border-radius: 20px;
+  }
+  .search-books {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+
+    input, button {
+      font-size: larger;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+    button {
+      width: 30%;
+      height: 100%;
+      background-color: crimson;
+      color: whitesmoke;
+      border: 0;
+    }
+    input:focus + button {
+      height: 100%;
+      // border: solid 4px whitesmoke;
+      outline: solid 2px whitesmoke;
+    }
+  }
+}
