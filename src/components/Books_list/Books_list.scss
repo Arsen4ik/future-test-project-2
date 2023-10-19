@@ -79,3 +79,20 @@ h1 {
     font-size: x-large;
     margin: 20px auto;
 }
+
+
+@media screen and (max-width: 800px) {
+    h1 {
+        margin: 20px;
+    }
+    .books {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+    }
+    .load-more {
+        width: 250px;
+    }
+}

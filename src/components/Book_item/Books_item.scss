@@ -48,3 +48,15 @@
         padding-left: 22px;
     }
 }
+
+
+@media screen and (max-width: 800px) {
+    .book {
+        width: 250px;
+        height: 150px;
+
+        h1, p, ul {
+            font-size: xx-small;
+        }
+    }
+}
