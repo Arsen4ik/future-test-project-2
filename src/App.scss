@@ -3,8 +3,9 @@
   background-image: url('../public/library.jpg');
   background-position: center;
   background-size: contain;
-  height: 33vh;
-  max-height: 300px;
+  // height: 33vh;
+  // height: 300px;
+  max-height: 50vh;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: 3fr 2fr repeat(2, 1fr);
@@ -12,21 +13,27 @@
   gap: 20px;
 
 
-  input, select {
+  input,
+  select {
     // width: 50%;
     padding: 5px;
     width: 100%;
     border: 0;
   }
-  input:focus, select:focus {
+
+  input:focus,
+  select:focus {
     outline: solid 2px crimson;
   }
+
   h1 {
     grid-column-start: 1;
     grid-column-end: 3;
     font-size: xx-large;
   }
-  h1, h2 {
+
+  h1,
+  h2 {
     // text-align: center;
     color: whitesmoke;
     backdrop-filter: blur(5px);
@@ -36,6 +43,7 @@
     margin: 0 auto;
     border-radius: 20px;
   }
+
   .search-books {
     grid-column-start: 1;
     grid-column-end: 3;
@@ -45,11 +53,13 @@
     flex-direction: row;
     gap: 10px;
 
-    input, button {
+    input,
+    button {
       font-size: larger;
       font-weight: bold;
       letter-spacing: 1px;
     }
+
     button {
       width: 30%;
       height: 100%;
@@ -57,10 +67,31 @@
       color: whitesmoke;
       border: 0;
     }
-    input:focus + button {
+
+    input:focus+button {
       height: 100%;
       // border: solid 4px whitesmoke;
       outline: solid 2px whitesmoke;
+    }
+  }
+}
+
+@media screen and (max-width: 800px) {
+  h1,
+  h2 {
+    font-size: small;
+  }
+
+  .searching {
+    gap: 10px;
+    grid-template-rows: repeat(4, 1fr);
+    h1 {
+      font-size: x-large;
+    }
+    .search-books {
+      button, input {
+        font-size: small;
+      }
     }
   }
 }
