@@ -14,7 +14,7 @@ function Search_books() {
                     }}
                     value={searchedBook.toLocaleLowerCase()}
                     onKeyDown={(e) => e.key === 'Enter' && setShowBooks(true)} />
-                <button onClick={() => setShowBooks(true)} >Search!</button>
+                <button onClick={() => searchedBook && setShowBooks(true)} >Search!</button>
             </div>
             <h2>Categories</h2>
             <h2>Sorting by</h2>
